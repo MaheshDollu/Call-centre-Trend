@@ -20,31 +20,36 @@ Ensure that columns like Satisfaction rating are in numeric format.
 
 
 Step 2: Define KPIs and Metrics
+
+
 Customer Satisfaction:
 Create a measure to calculate overall customer satisfaction:
 dax
-
-
 Overall Satisfaction = AVERAGE('Sheet1'[Satisfaction rating])
+
+
 Calls Answered vs. Abandoned:
 Create measures for total calls answered and total calls abandoned:
 dax
 
-
 Total Calls Answered = COUNTROWS(FILTER('Sheet1', 'Sheet1'[Answered (Y/N)] = "Y"))
+
 Total Calls Abandoned = COUNTROWS(FILTER('Sheet1', 'Sheet1'[Answered (Y/N)] = "N"))
+
+
+
 Average Speed of Answer:
 Create a measure for average speed of answer:
 dax
-
-
 Avg Speed of Answer = AVERAGE('Sheet1'[Speed of answer in seconds])
+
 Calls by Time:
 Create a time bucket measure for calls, e.g., hourly or by half-hour intervals, to analyze call volume throughout the day.
 Agent Performance Quadrant:
+
+
 Create measures for average handle time and total calls answered by each agent:
 dax
-
 
 Avg Handle Time = AVERAGE('Sheet1'[AvgTalkDuration])
 
