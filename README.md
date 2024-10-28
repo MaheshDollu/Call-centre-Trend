@@ -7,25 +7,17 @@ Creating a dashboard in Power BI for call center trends involves several steps t
 
 Step 1: Prepare Your Data
 Load the Data:
-
 Open Power BI Desktop.
-
 Click on Get Data and select Excel.
-
 Locate and load the 01 Call-Center-Dataset (1).xlsx file.
 
 Data Cleaning:
-
 Check for missing values, especially in crucial columns like Answered (Y/N), Resolved, and Satisfaction rating.
-
 Remove or fill any missing entries as necessary.
 
 Data Transformation:
-
 Convert the AvgTalkDuration from hh:mm:ss format to a numerical format (in seconds) for calculations.
-
 Create a new column for Call Date if it doesn’t exist by combining Date and Time.
-
 Ensure that columns like Satisfaction rating are in numeric format.
 
 
