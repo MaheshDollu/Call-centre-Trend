@@ -29,13 +29,10 @@ Create a measure to calculate overall customer satisfaction:
 dax
 Overall Satisfaction = AVERAGE('Sheet1'[Satisfaction rating])
 
-
 Calls Answered vs. Abandoned:
 Create measures for total calls answered and total calls abandoned:
 dax
-
 Total Calls Answered = COUNTROWS(FILTER('Sheet1', 'Sheet1'[Answered (Y/N)] = "Y"))
-
 Total Calls Abandoned = COUNTROWS(FILTER('Sheet1', 'Sheet1'[Answered (Y/N)] = "N"))
 
 
