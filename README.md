@@ -6,7 +6,6 @@ Possible KPIs include (to get you started, but not limited to):  Overall custome
 Creating a dashboard in Power BI for call center trends involves several steps to visualize the relevant KPIs and metrics from your dataset. Here’s a guide to help you build this dashboard:
 
 Step 1: Prepare Your Data
-
 Load the Data:
 
 Open Power BI Desktop.
