@@ -17,25 +17,27 @@ Data Transformation:
 Convert the AvgTalkDuration from hh:mm:ss format to a numerical format (in seconds) for calculations.
 Create a new column for Call Date if it doesn’t exist by combining Date and Time.
 Ensure that columns like Satisfaction rating are in numeric format.
+
+
 Step 2: Define KPIs and Metrics
 Customer Satisfaction:
 Create a measure to calculate overall customer satisfaction:
 dax
 
-Copy
+
 Overall Satisfaction = AVERAGE('Sheet1'[Satisfaction rating])
 Calls Answered vs. Abandoned:
 Create measures for total calls answered and total calls abandoned:
 dax
 
-Copy
+
 Total Calls Answered = COUNTROWS(FILTER('Sheet1', 'Sheet1'[Answered (Y/N)] = "Y"))
 Total Calls Abandoned = COUNTROWS(FILTER('Sheet1', 'Sheet1'[Answered (Y/N)] = "N"))
 Average Speed of Answer:
 Create a measure for average speed of answer:
 dax
 
-Copy
+
 Avg Speed of Answer = AVERAGE('Sheet1'[Speed of answer in seconds])
 Calls by Time:
 Create a time bucket measure for calls, e.g., hourly or by half-hour intervals, to analyze call volume throughout the day.
@@ -43,8 +45,12 @@ Agent Performance Quadrant:
 Create measures for average handle time and total calls answered by each agent:
 dax
 
-Copy
+
 Avg Handle Time = AVERAGE('Sheet1'[AvgTalkDuration])
+
+
+
+
 Step 3: Build the Dashboard
 Create Visualizations:
 Card Visuals: Use card visuals to display key metrics like overall customer satisfaction, total calls answered, and average speed of answer.
@@ -55,12 +61,20 @@ Add slicers for agent names, call topics, and date ranges to allow detailed anal
 Customize Layout:
 Arrange visuals in a clean, logical layout. For example, place key metrics at the top and more detailed charts below.
 Use consistent color themes to enhance readability.
+
+
+
+
 Step 4: Review and Publish
 Review Your Dashboard:
 Ensure all visuals are displaying correctly and that measures are calculating as intended.
 Check for responsiveness on different screen sizes.
 Publish the Dashboard:
 Click on Publish to share your dashboard with your team or management.
+
+
+
+
 Step 5: Prepare for Discussion
 Insights:
 Prepare insights based on the data, such as trends in customer satisfaction over time, call response times, and agent performance.
